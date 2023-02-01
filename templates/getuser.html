@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twiz</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='chat.png')}}">
+</head>
+<body>
+
+    <h2>Enter your username!</h2>
+    <form action="/index">
+        <input type="text" placeholder="Username" name="username">
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
