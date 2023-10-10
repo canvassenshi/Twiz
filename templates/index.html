@@ -12,21 +12,34 @@
         crossorigin="anonymous">
     </script>
 
-    <title>twiz</title>
+    <title>Twiz</title>
     <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='chat.png')}}">
     
 </head>
 <body>
-    <h2>Welcome {{username}}!</h2>
-    <div class="messages">
-        <input type="text" id="messageId" placeholder="Message">
-        <button id="sendText">Send</button>
+
+    <div class="title-container">
+        <h1 class="title">Twiz</h1>
+        <p class="subtitle">Connect. Communicate. Converse.</p>
     </div>
+        
+        <div class="chat-container">
+            <div class="chat-window">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            <div class="input-container">
+                <input type="text" id="messageId" placeholder="Type a Message..">
+                <button id="sendText">Send</button>
+            </div>
+        </div>
+
+
+    
 
     <script>
         const socket = io()
 
-        let messageContainer = document.querySelector(".messages");
+        let messageContainer = document.querySelector(".chat-window");
 
         socket.on("connect", () => {
             let p = document.createElement("p");
