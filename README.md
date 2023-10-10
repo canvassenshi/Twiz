@@ -1,4 +1,4 @@
-# Twiz (Chat Service)
+# Twiz Messaging App
 
 - Twiz is an open for all chat service (Chat Room)
 - Made using SocketIO and Python (Flask)
